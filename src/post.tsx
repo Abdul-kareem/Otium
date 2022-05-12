@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -7,86 +6,91 @@ import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import CommentIcon from '@mui/icons-material/Comment';
-import MoreHoritIcon from '@mui/icons-material/MoreHoriz';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import { styled } from '@mui/material/styles';
+import kareem from './imgs/Kareem.png'
+import postPhoto from './imgs/Post-Photo.png'
+import moreIcon from './imgs/more-icon.png'
+import CommentsIcon from './imgs/Comments-icon.png'
+import likesIcon from './imgs/likes-icon.png'
+import mirrosIcon from './imgs/mirros-icon.png'
 
-
-const PostCard = styled(Card)(({ theme }) => ({
-    "& .MuiCardHeader-root": {
-        backgroundColor: "#1A1C18"
-    },
-    '& .MuiCardContent-root':{
-        backgroundColor: "#1A1C18"
-    }
-
-}))
 
 
 export default function Post() {
 
     return (
-        <PostCard>
-            <CardHeader sx={{
-                color:'#1A1C18',
-            }}
+        <Card sx={{backgroundColor:'#1A1C18', fontSize:'12px'}}>
+            <CardHeader 
+                sx={{
+                    textAlign:'start',
+                    color:'#FCFDF6',
+                    padding:'8px 15px 5px 8px',
+                    
+                }}
                 avatar={
-                    <Avatar src="avatar1.jpg" alt="user" />
+                    
+                    <Avatar src={kareem} alt="user" sx={{mr:"-5px"}} />
+                    
                 }
                 action={
-                    <IconButton aria-label="settings">
-                        <MoreHoritIcon />
+                    <IconButton aria-label="settings" sx={{mr:'18px'}} >
+                        <img src={moreIcon} alt="more-icon" style={{width:'14px', height:'3px'}} />
                     </IconButton>
                 }
-                title="@Abdullareem Albashiry"
-                subheader="2h. Public"
+                title={<Typography sx={{fontSize:'13px',  fontWeight:'Medium'}}>@Abdulkareem Albashiri</Typography>}
+                subheader= {<Typography style={{fontSize:'11px', fontWeight:'light'}}>2h. Public</Typography>}  
+                subheaderTypographyProps={{color:'#FCFDF6'}}
             />
-            <CardContent>
-                <Typography variant="body2" color="text.primary">
-                    When on, sites can't use cookies that track you across the web
+            <CardContent sx={{
+                textAlign:'start',
+                padding:'8px 16px 8px 24px'
+
+                }}>
+                <Typography variant="body2" color="#FCFDF6" sx={{fontFamily:'poppins', fontWeight:'semiBold'}}>
+                    Donec ligula enim, viverra vitae efficitur a, dapibus a metus. Mauris. Etiam efficitur lorem diam, eu placerat ex aliquam etrt lorem efficitur.
                 </Typography>
             </CardContent>
 
             <CardMedia
                 component="img"
-                height="194"
-                image="post.jpg"
+                height="197"
+                image={postPhoto}
                 alt="Kareem Post"
             />
 
-            <CardActions disableSpacing={false} >
-                <IconButton aria-label="add to favorites" >
-                    <FavoriteIcon />
-                    <Typography color="text.secondary">
+            <CardActions disableSpacing={false} sx={{justifyContent:'center', paddingLeft:'44px'}}>
+                <IconButton aria-label="add to favorites" sx={{marginRight:'40px'}}>
+                    <img src={likesIcon} alt="likes-icon" style={{
+                        width:'18px', 
+                        height:'16px', 
+                        paddingRight:'10px'
+                        }} />
+                    <Typography color="#FCFDF6" sx={{fontSize:'13px'}}>
                         90
                     </Typography>
                 </IconButton>
-                <IconButton aria-label="commant">
-                    <CommentIcon />
-                    <Typography color="text.secondary">
+                <IconButton aria-label="commant" sx={{marginRight:'50px'}}>
+                    <img src={CommentsIcon} alt="Comments-icon" style={{
+                        width:'18px', 
+                        height:'17px',
+                        paddingRight:'10px' 
+                    }} />
+                    <Typography color="#FCFDF6" sx={{fontSize:'13px'}} >
                         20
                     </Typography>
                 </IconButton>
-                <IconButton aria-label="share">
-                    <ShareIcon />
-                    <Typography color="text.secondary">
+                <IconButton aria-label="share" sx={{marginRight:'50px'}}>
+                    <img src={mirrosIcon} alt="mirros-icon" style={{
+                        width:'14px', 
+                        height:'16px',
+                        paddingRight:'10px' 
+                    }} />
+                    <Typography color="#FCFDF6" sx={{fontSize:'13px'}}>
                         15
                     </Typography>
                 </IconButton>
-                <IconButton aria-label="Dolar">
-                    <AttachMoneyIcon />
-                    <Typography color="text.secondary">
-                        250
-                    </Typography>
-                </IconButton>
-
-
-
             </CardActions>
 
-        </PostCard>
+        </Card>
     );
 }

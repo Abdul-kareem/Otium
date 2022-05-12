@@ -1,10 +1,10 @@
 import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
-import SearchIcon from './search-Icon.png'
+import SearchIcon from './imgs/search-Icon.png'
 import { Button } from '@mui/material';
-import settingsIcon from './settings-icon.svg'
-import avatar from "./Avatar-Square.png"
+import settingsIcon from './imgs/settings-icon.svg'
+import avatar from "./imgs/Avatar-Square.png"
 import { width } from '@mui/system';
 
 const Search = styled('div')(({ theme }) => ({

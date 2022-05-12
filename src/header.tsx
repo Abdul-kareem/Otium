@@ -1,6 +1,7 @@
+import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import logo from './logo.png'
+import logo from './imgs/logo.png'
 
 
 
@@ -36,8 +37,9 @@ export default function OtuimHeader() {
             style={{
 
             }}
-            onClick={() => { alert('Disconnected');}}
-            variant="contained">Connected
+            onClick={() => {}}
+            variant="contained">
+              <Typography sx={{fontFamily:'poppins', fontWeight:'medium'}}>Connected</Typography>
           </Button>
     </Box>
   );
