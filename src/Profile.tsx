@@ -42,4 +42,8 @@ export default function Profile() {
       
   
   );
+<<<<<<< HEAD
 } 
+=======
+} 
+>>>>>>> 0e7273f (created Publish Post component, Navigation, and some styling.)
