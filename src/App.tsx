@@ -6,7 +6,8 @@ import PublishPost from "./PublishPost"
 import { ThemeProvider } from '@mui/material/styles';
 import{theme} from './theme'
 import { Divider } from '@mui/material';
-
+import Profile from './Profile'
+import Navigation from './Navigation'
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Post />  
         <Divider />
         <Post />  
+        <Navigation/> 
+      {/*  <PublishPost />*/}
       </div>
     </ThemeProvider>
   );

@@ -3,8 +3,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import logo from './imgs/logo.png'
 
-
-
 export default function OtuimHeader() {
   return (
     <Box style={{
