@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 import settingsIcon from './imgs/settings-icon.svg'
 import avatar from "./imgs/Avatar-Square.png"
 import { width } from '@mui/system';
-
+import {useNavigate} from 'react-router-dom'; 
 const Search = styled('div')(({ theme }) => ({
     borderRadius: '10px',
     backgroundColor: alpha('#E3F5E0', 0.9),
@@ -30,13 +30,13 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 
 
 export default function SearchBar() {
-
+    const navigate = useNavigate(); 
     return (
             
         <Box sx={{
             height: '50px',
         }}>
-            <Box sx={{
+            <Box onClick={()=> navigate('/profile')}  sx={{
                     backgroundColor:'#1A1C18',
                     height:'38px',
                     display:'flex',
