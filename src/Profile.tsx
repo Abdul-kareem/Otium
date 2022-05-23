@@ -42,4 +42,12 @@ export default function Profile() {
       
   
   );
+ main
 } 
+
+ HEAD
+} 
+
+} 
+ 0e7273f (created Publish Post component, Navigation, and some styling.)
+ main

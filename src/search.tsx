@@ -30,7 +30,11 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 
 
 export default function SearchBar() {
+ main
     const navigate = useNavigate(); 
+
+
+ main
     return (
             
         <Box sx={{
