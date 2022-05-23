@@ -8,13 +8,21 @@ import{theme} from './theme'
 import { Divider } from '@mui/material';
 import Profile from './Profile'
 import Navigation from './Navigation'
+ main
+import {BrowserRouter, Router, Routes, Route} from 'react-router-dom';
 
+
+ main
 
 function App() {
   return (
     <ThemeProvider theme={theme}> 
       <div className="App">
-        {/* <OtuimHeader />
+ main
+      
+      <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<> <OtuimHeader />
         <SearchBar />
         <Divider />
         <Post />  
@@ -22,8 +30,32 @@ function App() {
         <Post />  
         <Divider />
         <Post />  
+  <Navigation />  </>} />
+  <Route path="/createPost" element={<PublishPost />} />
+  <Route path="/profile" element={<Profile />} />
+    </Routes>
+    </BrowserRouter>
+       {/* <OtuimHeader />
+
+        {/* <OtuimHeader />
+ main
+        <SearchBar />
+        <Divider />
+        <Post />  
+        <Divider />
+        <Post />  
+        <Divider />
+        <Post />  
+ main
+  <Navigation /> */ }
+       {/* <PublishPost /> */}
+      
+     
+     
+
         <Navigation/> */}
         <PublishPost />
+ main
       </div>
     </ThemeProvider>
   );

@@ -10,7 +10,8 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import NavPhotoPost from './imgs/photo-post.png'
 import NavVideoPost from './imgs/post-video.png'
 import { styled, alpha } from '@mui/material/styles';
-
+ main
+import {useNavigate} from 'react-router-dom'; 
 
 const TypographyLabel = styled(Typography)(({ theme }) => ({
   color:'white',
@@ -19,9 +20,21 @@ const TypographyLabel = styled(Typography)(({ theme }) => ({
 }))
 
 
+
+const TypographyLabel = styled(Typography)(({ theme }) => ({
+  color:'white',
+  paddingTop:'10px'
+
+}))
+
+ main
+
 export default function PostPage() {
   const [value, setValue] = React.useState(0);
 
+export default function PostPage() {
+  const [value, setValue] = React.useState(0);
+  const navigate = useNavigate(); 
   return (
     <Box sx={{
       height:'100vh',
@@ -37,11 +50,19 @@ export default function PostPage() {
         mb:'35px',
         paddingTop:'22px'
       }}>
+ main
+        <IconButton onClick={()=> navigate('/')} >
+          <img src={ClosePost} alt='close-post' height={40}/>
+        </IconButton>
+        <IconButton onClick={()=> navigate('/')} >
+       <img src={PostButton} alt='post-button' height={40}/>
+
         <IconButton>
           <img src={ClosePost} alt='close-post' height={40}/>
         </IconButton>
         <IconButton>
           <img src={PostButton} alt='post-button' height={40}/>
+ main
         </IconButton>
       </Box>
       <Box sx={{
